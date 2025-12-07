@@ -1,0 +1,240 @@
+/* HOME BOX */
+.home-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 95%;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/* SUBTITLES */
+.subtitle {
+    font-family: "JetBrains", monospace;
+    font-style: italic;
+    font-size: 13px;
+    color: #777;
+    margin-top: 6px;
+}
+
+/* CONTENEDOR A */
+.boxes-containerA {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 22px;
+    flex-wrap: nowrap;
+}
+
+/* WHAT IS */
+.box-WhatIs {
+    background-color: #ffffff;
+    font-family: "Quick", sans-serif;
+    color: black;
+    padding: 14px 16px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    border-radius: 12px;
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.25s ease;
+}
+
+.box-WhatIs h3 {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.box-WhatIs li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.box-WhatIs img {
+    display: block;
+    margin: 8px auto 0 auto;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* WHAT FOR */
+.box-WhatFor {
+    background-color: #ffffff;
+    font-family: "Quick", sans-serif;
+    color: black;
+    padding: 14px 16px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    border-radius: 12px;
+
+    flex: 1;
+    min-width: 320px;
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.25s ease;
+}
+
+.box-WhatFor h3 {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.box-WhatFor li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.box-WhatFor img {
+    display: block;
+    margin: 8px auto 0 auto;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* CONTENEDOR B */
+.boxes-containerB {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 22px;
+    flex-wrap: nowrap;
+}
+
+/* HOW IT WORKS */
+.box-howworks {
+    background-color: #ffffff;
+    font-family: "Quick", sans-serif;
+    color: black;
+    padding: 14px 16px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    border-radius: 12px;
+
+    flex: 1;
+    min-width: 320px;
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.25s ease;
+}
+
+.box-howworks h3 {
+    margin: 8px auto;
+    text-align: center;
+}
+
+.box-howworks li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.box-howworks img {
+    display: block;
+    margin: 8px auto 0 auto;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* KEY FEATURES */
+.box-keyfeatures {
+    background-color: #ffffff;
+    font-family: "Quick", sans-serif;
+    color: black;
+    padding: 14px 16px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+    border-radius: 12px;
+
+    flex: 1;
+    min-width: 320px;
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.25s ease;
+}
+
+.box-keyfeatures h3 {
+    margin: 8px auto;
+    text-align: center;
+}
+
+.box-keyfeatures li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.box-keyfeatures img {
+    display: block;
+    margin: 8px auto 0 auto;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* HOVER */
+.box-WhatIs:hover,
+.box-WhatFor:hover,
+.box-howworks:hover,
+.box-keyfeatures:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* RESPONSIVE DE HOME */
+@media (max-width: 1100px) {
+    .boxes-containerA,
+    .boxes-containerB {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .boxes-containerA,
+    .boxes-containerB {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .box-WhatIs,
+    .box-WhatFor,
+    .box-howworks,
+    .box-keyfeatures {
+        width: 95%;
+        max-width: 700px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-box { padding: 12px; }
+    .box-WhatIs, 
+    .box-WhatFor,
+    .box-howworks,
+    .box-keyfeatures {
+        padding: 12px;
+    }
+}

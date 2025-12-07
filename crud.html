@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DESINGNS -->
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/crud.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- TITLE -->
+    <title>CRUDScope - Visual CRUD</title>
+</head>
+<body>
+    <div class="main-content">
+
+        <!-- HEADER -->
+        <header>
+            <h1>CRUDScope - HTML MediaPanel</h1>
+            <p>Task administration panel, simulating CRUD operations.</p>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crud.html">CRUD</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+
+        <!-- LAYOUT -->
+        <div class="layout">
+
+            <!-- SIDEBAR -->
+            <aside class="crud-sidebar sidebar">
+                <h3>CRUD Menu</h3>
+                <ul>
+                    <li class="active" data-target="createView"><i class="fa-solid fa-pen"></i> Create</li>
+                    <li data-target="readView"><i class="fa-solid fa-list"></i> Read</li>
+                    <li data-target="updateView"><i class="fa-solid fa-pen-to-square"></i> Update</li>
+                    <li data-target="deleteView"><i class="fa-solid fa-trash"></i> Delete</li>
+                </ul>
+            </aside>
+
+                <!-- CREATE -->
+                <section class="container-create crud-page active" id="createView">
+                    <h2>Create Task</h2>
+                    <form class="form">
+
+                        <div class="form-group">
+                            <label>Task name</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-pen"></i>
+                                <input type="text" placeholder="Write a task...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-align-left"></i>
+                                <textarea placeholder="Task details..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Date</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Status</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-flag"></i>
+                                <select>
+                                    <option>Pending</option>
+                                    <option>In progress</option>
+                                    <option>Completed</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary">Create Task</button>
+                    </form>
+                </section>
+
+                <!--  READ -->
+                <section class="container-read crud-page" id="readView">
+                    <h2>All Tasks</h2>
+
+                    <div class="read-cards">
+
+                        <div class="task-card">
+                            <h4>Sample Task 1</h4>
+                            <p>Description of the task...</p>
+                            <span class="status pending">Pending</span>
+                        </div>
+
+                        <div class="task-card">
+                            <h4>Sample Task 2</h4>
+                            <p>More details here...</p>
+                            <span class="status completed">Completed</span>
+                        </div>
+
+                        <div class="task-card">
+                            <h4>Sample Task 3</h4>
+                            <p>Description of the task...</p>
+                            <span class="status pending">Pending</span>
+                        </div>
+
+                        <div class="task-card">
+                            <h4>Sample Task 4</h4>
+                            <p>More details here...</p>
+                            <span class="status completed">Completed</span>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!--  UPDATE -->
+                <section class="container-update crud-page" id="updateView">
+                    <h2>Update Task</h2>
+
+                    <form class="form">
+                        <div class="form-group">
+                            <label>Select a task</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-list"></i>
+                                <select>
+                                    <option>Sample Task 1</option>
+                                    <option>Sample Task 2</option>
+                                    <option>Sample Task 3</option>
+                                    <option>Sample Task 4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>New name</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-pen"></i>
+                                <input type="text" placeholder="Updated name...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>New description</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-align-left"></i>
+                                <textarea placeholder="Updated description..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>New date</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>New status</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-flag"></i>
+                                <select>
+                                    <option>Pending</option>
+                                    <option>In progress</option>
+                                    <option>Completed</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary">Update Task</button>
+                    </form>
+                </section>
+
+
+                <!--  DELETE -->
+                <section class="container-delete crud-page" id="deleteView">
+                    <h2>Delete Tasks</h2>
+
+                    <ul class="delete-list">
+
+                        <li>
+                            Sample Task 1
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li>
+                            Sample Task 2
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li>
+                            Sample Task 3
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li>
+                            Sample Task 4
+                            <button class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+                </section>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+
+            <!-- CONTACT SECTION -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Héctor Hernán Ríos Rodríguez</p>
+                <p>Web Developer - Clan Turing</p>
+                <p>Email: <a href="mailto:riosrodriguezhectorhernan59@gmail.com">riosrodriguezhectorhernan59@gmail.com</a></p>
+                <p>Phone: <a href="tel:+573001234567">+57 300 123 4567</a></p>
+            </div>
+
+            <!-- SOCIAL NETWORKS -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>© 2025 Clan Turing. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+        <!-- CRIPTS -->
+    <script src="Cripts/crud.js"></script>
+</body>
+</html>

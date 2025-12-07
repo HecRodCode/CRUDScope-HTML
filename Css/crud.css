@@ -1,0 +1,218 @@
+/* LAYOUT */
+.layout {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* SIDEBAR */
+.sidebar {
+    min-width: 320px;
+    margin-bottom: 12px;
+    background: #2c3e50;
+    color: #fff;
+    padding: 18px;
+    border-radius: 10px;
+    font-family: "JetBrains", monospace;
+}
+
+.sidebar ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.sidebar li {
+    background: #34495e;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.18s ease;
+}
+
+/* SIDEBAR EFFECT */
+.sidebar li:hover {
+    background-color: rgb(164, 190, 212);
+    color: black;
+    transform: translateX(6px);
+}
+
+/* CREATE */
+.container-create {
+    flex: 1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 30px;
+    max-width: 1200px; 
+
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 20px auto 20px 25px; 
+    position: relative;
+    top: -20px;
+}
+
+/* READ */
+.container-read {
+    flex: 1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 20px auto 20px 25px;
+    position: relative;
+    top: -20px;
+}
+
+/* UPDATE */
+.container-update {
+    flex: 1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 1200px;
+
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 20px auto 20px 25px;
+    position: relative;
+    top: -20px;
+}
+
+/* DELETE */
+.container-delete {
+    flex: 1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 1200px;
+
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin: 20px auto 20px 25px;
+    position: relative;
+    top: -20px;
+}
+
+/* TITLES */
+.container-create h2,
+.container-read h2,
+.container-update h2,
+.container-delete h2 {
+    font-family: "JetBrains", monospace;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+/* FORM BASE */
+.form-group { display:flex; 
+    flex-direction:column; 
+    gap:8px; 
+    margin-bottom:12px; 
+}
+
+/* ICOS */
+.input-icon { 
+    position: relative; 
+}
+
+.input-icon i { 
+    position:absolute; 
+    left:10px; 
+    top:50%; 
+    transform:translateY(-50%); 
+    color:#666; 
+}
+
+.input-icon input,
+.input-icon textarea,
+.input-icon select {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+    border-radius:8px;
+    border:1px solid #d0d6dc;
+    background:#f8f9fa;
+    font-family: "Quick", sans-serif;
+}
+
+/* BUTTONS */
+.btn {
+    padding:10px 14px;
+    border-radius:8px;
+    border: none;
+    cursor:pointer;
+    font-family: "JetBrains", monospace;
+}
+.btn-primary { background:#2c3e50; 
+    color:white; 
+}
+.btn-danger { background:#e02424; 
+    color:white; 
+}
+
+/* CARDS */
+.read-cards { 
+    display:grid; 
+    gap:12px; 
+}
+
+.task-card { 
+    padding:12px; 
+    border-radius:8px; 
+    background:#fff; 
+    border-left:4px solid #2980b9; 
+    box-shadow:0 3px 8px rgba(0,0,0,0.3); 
+}
+
+/* DELETE LIST */
+.delete-list { 
+    list-style:none; 
+    padding:0; }
+
+.delete-list li { 
+    display:flex; 
+    justify-content:space-between; 
+    padding:10px; 
+    background:#fff; 
+    border-radius:8px; 
+    margin-bottom:8px; 
+    border-left:4px solid #c0392b; 
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+    .layout { 
+        flex-direction:column; 
+        align-items:center; 
+    }
+
+    .sidebar { 
+        width: 100%; 
+        max-width: 490px; 
+        margin-bottom: 12px; 
+    }
+
+    .content { 
+        width: 95%; 
+        padding:16px; 
+    }
+
+    .container-create, .container-read, .container-update, .container-delete {
+        width: 100%;
+        max-width: 490px; 
+        margin-left: -10px; 
+        margin-right: -10px;
+    }
+}
